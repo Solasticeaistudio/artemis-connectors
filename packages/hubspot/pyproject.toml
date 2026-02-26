@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artemis-hubspot"
+version = "0.1.0"
+description = "Artemis HubSpot connector for solstice-agent — 15 CRM, deals, and marketing tools."
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{name = "Solstice Studio"}]
+keywords = ["solstice", "agent", "hubspot", "crm", "deals", "artemis", "connector"]
+dependencies = ["httpx>=0.25.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.entry-points."solstice_agent.connectors"]
+hubspot = "artemis.connectors.hubspot:register_hubspot_tools"
+
+[project.urls]
+Homepage = "https://github.com/Solasticeaistudio/artemis-connectors"
+
+[tool.setuptools.packages.find]
+include = ["artemis*"]
