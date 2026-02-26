@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "artemis-connectors"
 version = "0.1.0"
-description = "Artemis premium connectors for solstice-agent. Deep integrations for Camunda, and more."
+description = "Artemis premium connectors for solstice-agent. Deep integrations for Camunda, Salesforce, HubSpot, ServiceNow, Jira, and more."
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
     {name = "Solstice Studio"},
 ]
-keywords = ["solstice", "agent", "camunda", "bpmn", "connector", "artemis"]
+keywords = ["solstice", "agent", "camunda", "bpmn", "salesforce", "hubspot", "servicenow", "jira", "connector", "artemis"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -33,6 +33,10 @@ dev = ["pytest>=8.0"]
 
 [project.entry-points."solstice_agent.connectors"]
 camunda = "artemis.connectors.camunda:register_camunda_tools"
+salesforce = "artemis.connectors.salesforce:register_salesforce_tools"
+hubspot = "artemis.connectors.hubspot:register_hubspot_tools"
+servicenow = "artemis.connectors.servicenow:register_servicenow_tools"
+jira = "artemis.connectors.jira:register_jira_tools"
 
 [project.urls]
 Homepage = "https://github.com/Solasticeaistudio/artemis-connectors"
