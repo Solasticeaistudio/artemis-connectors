@@ -1,0 +1,2 @@
+[solstice_agent.connectors]
+camunda = artemis.connectors.camunda:register_camunda_tools

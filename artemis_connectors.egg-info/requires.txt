@@ -1,0 +1,5 @@
+httpx>=0.25.0
+defusedxml>=0.7.1
+
+[dev]
+pytest>=8.0
